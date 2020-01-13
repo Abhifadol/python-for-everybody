@@ -1,4 +1,4 @@
-python
+# The code below almost works
 
-name = raw_input("Enter your name")
-print "Hello " + name
+name = input("Enter your name")
+print ("Hello " + name)
