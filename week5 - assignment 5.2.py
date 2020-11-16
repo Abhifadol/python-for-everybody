@@ -6,19 +6,17 @@ Enter the numbers from the book for problem 5.1 and Match the desired output as 
 
 largest = None
 smallest = None
+
 while True:
-    try: 
-    	num = raw_input("Enter a number: ")
-    	if num == "done" : break
-    	n = int(num)
-    	if largest < n :
-        	largest = n
-    	if smallest == None or smallest > n : smallest = n
-        
-    
+    num = input("Enter a number: ")
+    if num == "done": break
+    try:
+        num = int(num)
+        if largest is None or largest < num: largest = num
+        if smallest is None or smallest > num: smallest = num
     except:
         print ("Invalid input")
-    
+        continue
 
-print ("Maximum is", largest)
-print ("Minimum is", smallest)
+print ("Maximum is",largest)
+print ("Minimum is",smallest)
